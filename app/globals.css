@@ -6,6 +6,10 @@ body {
   @apply font-nunito;
   background-color: #ebf8ff;
   color: #333333;
+  overflow-x: hidden;
+}
+html {
+  margin: auto;
 }
 
 @layer base {
@@ -18,4 +22,12 @@ body {
   body {
     @apply bg-background text-foreground;
   }
+}
+
+.scrollbar-hide {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE 10+ */
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
 }

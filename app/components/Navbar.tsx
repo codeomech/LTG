@@ -3,10 +3,13 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import { Menu, X } from "lucide-react";
+import { usePathname } from "next/navigation";
+import { MobileNavigation } from "./MobileNav";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const pathname = usePathname();
 
   // Handle scroll effect
   useEffect(() => {
@@ -18,24 +21,32 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Smooth scroll function
   const scrollToSection = (id: string) => {
-    const section = document.getElementById(id);
-    if (section) {
-      window.scrollTo({
-        top: section.offsetTop - 80, // Adjust for navbar height
-        behavior: "smooth",
-      });
+    if (pathname !== "/") {
+      // Navigate to Home with a hash (#id) instead of query parameters
+      window.location.href = `/#${id}`;
+    } else {
+      const section = document.getElementById(id);
+      if (section) {
+        window.scrollTo({
+          top: section.offsetTop - 80, // Adjust for navbar height
+          behavior: "smooth",
+        });
+      }
     }
-    setIsOpen(false); // Close mobile menu after clicking
+    setIsOpen(false); // Close mobile menu
   };
 
   return (
     <nav
-      className={`fixed top-0 w-full items-center 
-              border-b border-[#ECFAFF] bg-white/70  z-50 
-              h-[52px] px-[20px] py-[20px]
-              md:h-[110px] md:px-[60px] md:py-[30px]`}
+      className={`fixed top-0 w-full z-50 
+    border-b border-white/20 
+    bg-white/40 backdrop-blur-lg 
+    shadow-md transition-all duration-300 ease-in-out 
+    h-[58px] px-[20px] pb-[20px] pt-3 
+    lg:h-[110px] lg:px-[60px] lg:py-[30px]
+    ${isScrolled ? "backdrop-blur-lg" : "backdrop-blur-none"}
+  `}
     >
       <div className="flex justify-between items-center">
         {/* Logo */}
@@ -82,45 +93,9 @@ const Navbar = () => {
         </div>
 
         {/* Mobile Menu Button */}
-        <button
-          className="md:hidden text-gray-900"
-          onClick={() => setIsOpen(!isOpen)}
-        >
-          {isOpen ? <X size={28} /> : <Menu size={28} />}
-        </button>
+        {/* Mobile Navigation */}
+        <MobileNavigation scrollToSection={scrollToSection} />
       </div>
-
-      {/* Mobile Navigation */}
-      {isOpen && (
-        <div className="md:hidden bg-white shadow-lg">
-          <div className="flex flex-col space-y-4 py-4 px-6">
-            <button
-              onClick={() => scrollToSection("home")}
-              className="font-medium hover:text-gray-600"
-            >
-              Home
-            </button>
-            <button
-              onClick={() => scrollToSection("products")}
-              className="font-medium hover:text-gray-600"
-            >
-              Product
-            </button>
-            <button
-              onClick={() => scrollToSection("about")}
-              className="font-medium hover:text-gray-600"
-            >
-              About us
-            </button>
-            <button
-              onClick={() => scrollToSection("contact")}
-              className="bg-gray-900 text-white px-4 py-2 rounded-full text-center hover:bg-gray-700 transition"
-            >
-              Contact us
-            </button>
-          </div>
-        </div>
-      )}
     </nav>
   );
 };

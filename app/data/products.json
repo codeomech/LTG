@@ -1,0 +1,777 @@
+{
+    "categories": [
+        {
+            "name": "Perishable",
+            "slug": "perishable",
+            "subcategories": [
+                {
+                    "name": "Onions",
+                    "slug": "onions",
+                    "label": "We are leaders in the market for providing best range of Dehydrated Onion, Red & White Onion and Fresh Onion",
+                    "image": "/perishable/onions/fresh-onions.png",
+                    "tags": [
+                        "Export",
+                        "Import",
+                        "Domestic"
+                    ],
+                    "products": [
+                        {
+                            "name": "Fresh Onion",
+                            "image": "/perishable/onions/fresh-onions.png",
+                            "description": "Fresh Onions are one of the most commonly used vegetables and are an essential ingredient of almost all food preparations. It is used in the preparation of almost all dishes. Onions have various health benefits and have the ability to cure or prevent various diseases. Also, onions are effective blood purifiers. These fresh onions offered by us are sourced from trusted vendors.",
+                            "tags": [
+                                "Export",
+                                "Import",
+                                "Domestic"
+                            ],
+                            "why": [
+                                "Moisture-free packing",
+                                "Rich nutritional content",
+                                "Rich source of Vitamin C and dietary fiber",
+                                "Free from chemicals and artificial colors",
+                                "100% fresh",
+                                "Natural aroma"
+                            ],
+                            "applications": [
+                                "Household",
+                                "Hotels",
+                                "Food Processing Industry",
+                                "Restaurants",
+                                "Cosmetic Industry",
+                                "Pharmaceutical Industry"
+                            ],
+                            "usedFor": [
+                                "Making curries, pickles and various other dishes"
+                            ]
+                        },
+                        {
+                            "name": "Dehydrated Onion",
+                            "image": "/perishable/onions/dried-onions.png",
+                            "description": "We are leading supplier/ Exporter of dehydrated onions, dehydrated garlic and other dehydrated vegetables and spices. With a motto to deliver significant and qualitative dehydrated food items to customers, Saraswati International have introduced a whole new extent of dehydrated vegetables and spices which are not only nutritious but excellent in taste.",
+                            "tags": [
+                                "Export",
+                                "Import",
+                                "Domestic"
+                            ],
+                            "specs": {
+                                "Min. Order (MOQ)": "25 Metric Ton",
+                                "Shelf Life": "10-15days, 15-30days, 30-45days",
+                                "Packaging Type": "Gunny Bags, Jute Bags, Net Bags, Plastic Packets",
+                                "Packaging Size": "10g,5kg,20kg, 50kg, ",
+                                "Type": "Garlic flakes",
+                                "Style": "Dehydrated",
+                                "Cultivation Type": "Common, GMO, Natural, Organic",
+                                "Part": "Vegetable"
+                            },
+                            "paymentTerm": "L/C, D/A, D/P, T/T, Western Union"
+                        },
+                        {
+                            "name": "Red & White Onion",
+                            "image": "/perishable/onions/red-onions.png",
+                            "tags": [
+                                "Export",
+                                "Import",
+                                "Domestic"
+                            ],
+                            "description": "We supply and export qualitative whole red onions as well as sliced onions to our customers across the globe. These onions are dehydrated using a continuous-conveyor drying system. Each these stages are carefully controlled to remove the optimum amount of moisture without damaging the onion's pure flavor. We further pack these onions in consumer or bulk packages, depending on the need of our clients.",
+                            "specs": {
+                                "Min. Order (MOQ)": "25 Metric Ton",
+                                "Color": "Light Red, Red",
+                                "Application": "Cooking",
+                                "Type": "Fresh Red Onion, Red Onion",
+                                "Part": "Vegetable"
+                            },
+                            "paymentTerm": "L/C, D/A, D/P, T/T, Western Union"
+                        }
+                    ]
+                },
+                {
+                    "name": "Fresh Fruits",
+                    "slug": "fresh-fruits",
+                    "label": "Our offered Product range includes Fresh Grapes, Ripe Banana, Banana, Red Pomegranate and Grapes.",
+                    "image": "/perishable/fresh-fruits/fresh-fruits.png",
+                    "tags": [
+                        "Export",
+                        "Import",
+                        "Domestic"
+                    ],
+                    "products": [
+                        {
+                            "name": "Fresh Grapes",
+                            "image": "/perishable/fresh-fruits/fresh-grapes.png",
+                            "description": "We provide Fresh Grapes that we source from trusted vendors. Grapes are one of the tastiest fruits that are eaten raw or used for making a number of food products. We deliver Fresh grapes in properly sealed and hygienic packets and boxes to clients all across the globe. We are considered to be one of the prominent Exporters of Fresh Grapes in India.",
+                            "tags": [
+                                "Export",
+                                "Import",
+                                "Domestic"
+                            ],
+                            "why": [
+                                "100% fresh",
+                                "No added color or chemical",
+                                "Natural flavor",
+                                "Rich in vitamin and mineral content"
+                            ],
+                            "usedFor": [
+                                "Making jams, vine, raisins etc."
+                            ],
+                            "applications": [
+                                "Hotels",
+                                "Food Processing Industry",
+                                "Restaurants",
+                                "Cosmetics",
+                                "Household",
+                                "Pharmaceutical"
+                            ]
+                        },
+                        {
+                            "name": "Red Pomegranate",
+                            "image": "/perishable/fresh-fruits/pomeogranate.png",
+                            "description": "We offer farm fresh Red Pomegranate that has high nutritional value and bear various health benefits. These Red Pomegranates are obtained by us from reliable vendors. These are supplied and exported to the clients in boxes and packets that are well-sealed to retain their natural taste and freshness. We take care that no piece that is delivered is stale or rot.",
+                            "tags": [
+                                "Export",
+                                "Import",
+                                "Domestic"
+                            ],
+                            "why": [
+                                "Rich source of vitamin C, B6 and Potassium",
+                                "Free from chemicals",
+                                "Assured to be fresh",
+                                "No artificial color is added"
+                            ],
+                            "usedFor": [
+                                "Making curries, juice and various other dishes",
+                                "Making ayurvedic medicines"
+                            ],
+                            "applications": [
+                                "Hotels",
+                                "Food Processing Industry",
+                                "Restaurants",
+                                "Cosmetics",
+                                "Household",
+                                "Pharmaceutical"
+                            ]
+                        },
+                        {
+                            "name": "Grapes",
+                            "image": "/perishable/fresh-fruits/grapes.png",
+                            "description": "A grape is the non-climacteric fruit, botanically a true berry, that grows on the perennial and deciduous woody vines of the genus Vitis. Grapes can be eaten raw or used for making jam, juice, jelly, vinegar, grape seed extracts, raisins, and grape seed oil. Grapes are also used in some kinds of confectionery.We supply a qualitative range of grapes in the national and international market. Our personnel procure these grapes directly from the farms and check for its freshness and taste. The grapes that we supply have healthy skin bursting with juice. They are high in moisture content and are packed with immense care to maintain its intact condition and freshness.",
+                            "tags": [
+                                "Export",
+                                "Import",
+                                "Domestic"
+                            ],
+                            "specs": {
+                                "Cultivation Type": "Common, GMO, Natural, Organic",
+                                "Shelf Life": "0-3days, 3-5days, 5-7days, 7-10days",
+                                "Color": "Light Red, Red",
+                                "variety": "Red Globe, Sharad Seedless",
+                                "Packaging Type": "Curated Box, Net Bag, Plastic Box, Wooden Box",
+                                "Packaging Size": "10-20kg, 20-25kg, 5-10kg",
+                                "Application": "Making Custards, Making Juice, Making Syrups",
+                                "Type": "Dried Grape, Fresh Grape, Grape",
+                                "Part": "Fruit"
+                            },
+                            "paymentTerm": "L/C, D/A, D/P, T/T, Western Union"
+                        },
+                        {
+                            "name": "Banana",
+                            "image": "/perishable/fresh-fruits/banana.png",
+                            "description": "We offer quality Banana that is obtained by the commercial processing of sound, mature, ripened Banana fruit possessing the characteristic flavor and color of Banana. These are supplied to our customers from both national and international market. Banana is used in many restaurants and fast food joints for making milk shakes, ice creams, and fruit salads.",
+                            "tags": [
+                                "Export",
+                                "Import",
+                                "Domestic"
+                            ],
+                            "specs": {
+                                "Cultivation Type": "Organic",
+                                "Shelf Life": "0-3days, 3-5days, 5-7days, 7-10days",
+                                "Color": "Pink, Multicolor, Orange, White, Yellow",
+                                "style": "Fresh",
+                                "Packaging Type": "Jute Bag, Net Bag, Plastic Bag",
+                                "Packaging Size": "20Kg, 5Kg",
+                                "Application": "Cooking, Home, Hotels",
+                                "Type": "Organic Fruit",
+                                "Feature": "Good For Health, Good For Nutrition's, Non Harmful"
+                            },
+                            "paymentTerm": "L/C, D/A, D/P, T/T, Western Union"
+                        },
+                        {
+                            "name": "Ripe Banana",
+                            "description": "Avail from us Ripe Bananas that we procure from reliable vendors. These ripe bananas are grown in well-maintained farms using latest cultivation methods. We assure these ripe bananas to be 100% fresh. They are packed in sealed and hygienic boxes, which ensure their freshness.",
+                            "image": "/perishable/fresh-fruits/ripe-bananas.png",
+                            "tags": [
+                                "Export",
+                                "Import",
+                                "Domestic"
+                            ],
+                            "why": [
+                                "Fresh",
+                                "Have Natural taste",
+                                "Free from harmful chemicals",
+                                "No artificial color used"
+                            ],
+                            "usedFor": [
+                                "Making various dishes",
+                                "Making fiber and yarn",
+                                "Making banana paper etc."
+                            ],
+                            "applications": [
+                                "Hotels",
+                                "Food Processing Industry",
+                                "Restaurants",
+                                "Cosmetics",
+                                "Household",
+                                "Pharmaceutical"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Fresh, Organic & Preserved Vegetables",
+                    "slug": "preserved-vegetables",
+                    "label": "Our offered product range includes Soya Beans and Garlic.",
+                    "image": "/perishable/organic/garlic.png",
+                    "tags": [
+                        "Export",
+                        "Import",
+                        "Domestic"
+                    ],
+                    "products": [
+                        {
+                            "name": "Soya Beans",
+                            "image": "/perishable/organic/soya.png",
+                            "description": "We bring a wide assortment of high-grade Soya Beans that are rich in proteins, iron, and calcium. This consumable cereal offered by us conforms to the highest international standards and is in high demand in trade: Export, Import, Domestic.",
+                            "why": [
+                                "Reduces the risk of Cancer",
+                                "Reduces the risk of Cardiovascular diseases",
+                                "Reduces the risk of Osteoporosis",
+                                "Reduces the risk of Menopausal symptoms"
+                            ],
+                            "usedFor": [
+                                "Whole soya beans",
+                                "Soya milk",
+                                "Tofu",
+                                "Tempeh",
+                                "Soya sauce"
+                            ],
+                            "applications": [
+                                "Hotels",
+                                "Restaurants",
+                                "Residential",
+                                "Food Processing Industry",
+                                "Pharmaceutical Industry",
+                                "Cosmetics Industry"
+                            ]
+                        },
+                        {
+                            "name": "Garlic",
+                            "image": "/perishable/organic/garlic.png",
+                            "description": "The Indian garlic is known for its pungency. We Export up to 50 mm Garlic as per buyers requirement. Garlic is considered as one of the most beneficial agro-product. The Indian breed of garlic is preferred over others specially for its taste and other benefits. We export these Indian garlic for global consumption with guaranteed freshness. We procure these garlics directly from the farms and are specially grown and hand harvested. These garlics are free from damage, soil cuts and other infections. We check the garlics for quality and then make them suitable for trade. Further, we dehydrate and process garlics to keep the taste and nutrient content intact. The dehydrated garlics and garlic clove are peeled, cut to size or pulverize tested and then finally packed using quality packaging materials.",
+                            "tags": [
+                                "Export",
+                                "Import",
+                                "Domestic"
+                            ],
+                            "specs": {
+                                "Cultivation Type": "GMO,Organic",
+                                "Packaging Type": "Giuuny Bags, Paper Box, Plastic Packet",
+                                "Application": "Cooking, Human Consumption, Oil Extraction",
+                                "Type": "Garlic",
+                                "Style": "Dried, Wet"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "Seasonal fruits",
+                    "slug": "seasonal",
+                    "label": "Our offered product range includes mangoes, kiwi, coconut and more.",
+                    "image": "/perishable/seasonal/seasonal-fruit.png",
+                    "tags": [
+                        "Export",
+                        "Import",
+                        "Domestic"
+                    ],
+                    "products": [
+                        {
+                            "name": "Mango",
+                            "image": "/perishable/seasonal/mango.png",
+                            "description": "We offer farm-fresh, premium-quality Mangoes known for their rich aroma, vibrant color, and sweet, juicy flavor. Sourced from trusted growers, our mangoes are naturally ripened and packed with essential vitamins, especially Vitamin A and C. Revered as the King of Fruits,mangoes are enjoyed fresh or used in a variety of culinary applications around the world.",
+                            "tags": [
+                                "Export",
+                                "Import",
+                                "Domestic"
+                            ],
+                            "applications": [
+                                "Consumed fresh as a fruit or in fruit salads",
+                                "Used in juices, smoothies, and milkshakes",
+                                "Added to desserts like ice creams, puddings, and cakes",
+                                "Processed into pulp, jams, and pickles"
+                            ]
+                        },
+                        {
+                            "name": "Kiwi",
+                            "image": "/perishable/seasonal/kiwi.png",
+                            "description": "Our high-quality Kiwi fruit is known for its tangy-sweet flavor, vibrant green flesh, and high nutritional value. Rich in Vitamin C, antioxidants, and dietary fiber, kiwi is a health-boosting fruit enjoyed both fresh and as a versatile ingredient in many dishes. Carefully selected and packed to maintain freshness, kiwi is ideal for health-conscious consumers.",
+                            "tags": [
+                                "Export",
+                                "Import",
+                                "Domestic"
+                            ],
+                            "applications": [
+                                "Eaten fresh or in fruit bowls and salads",
+                                "Blended into smoothies and detox drinks",
+                                "Used as a topping for desserts, cakes, and yogurts",
+                                "Included in breakfast bowls and health snacks"
+                            ]
+                        },
+                        {
+                            "name": "Coconut",
+                            "image": "/perishable/seasonal/coconut.png",
+                            "description": "We offer premium-quality Coconuts, sourced from trusted farms to ensure freshness, rich taste, and high nutritional value. Available in various forms—whole, semi-husked, or dehusked—coconuts are widely used in culinary, cosmetic, and religious applications. Known for their hydrating water, creamy flesh, and natural oil content, they are a versatile and essential product in many cultures.",
+                            "tags": [
+                                "Export",
+                                "Import",
+                                "Domestic"
+                            ],
+                            "applications": [
+                                "Used in cooking and traditional recipes",
+                                "Source of coconut water and oil",
+                                "Widely used in cosmetics and skincare products",
+                                "Essential for religious and ceremonial purposes"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Food Grains",
+                    "slug": "food-grains",
+                    "label": "Our offered product range includes Yellow Maize, Corn Grit, and Basmati Rice.",
+                    "image": "/perishable/food-grains/food-grains.png",
+                    "tags": [
+                        "Export",
+                        "Import",
+                        "Domestic"
+                    ],
+                    "products": [
+                        {
+                            "name": "Yellow Maize",
+                            "image": "/perishable/food-grains/yellow-maize.png",
+                            "description": "We are a reliable trader of best quality Yellow Maize that has high content of starch. The exclusive variety of Yellow Maize offered by us is highly in demand by the clients, owing to its high quality and freshness.",
+                            "tags": [
+                                "Export",
+                                "Import",
+                                "Domestic"
+                            ],
+                            "usedFor": [
+                                "Maize corn",
+                                "Corn oil production",
+                                "Baby corns",
+                                "Popcorns"
+                            ],
+                            "applications": [
+                                "Food Processing Industry",
+                                "Pharmaceutical Industry",
+                                "Hotels",
+                                "Restaurants",
+                                "Cosmetic Industry"
+                            ]
+                        },
+                        {
+                            "name": "Corn Grit",
+                            "image": "/perishable/food-grains/corn-grit.png",
+                            "description": "We are Manufacturer and Suppliers of Yellow Corn Grit / Maize Grit for Human Food, Animal Feed, Bird Feed, Poultry Feed . 100% safe and hygienic of Indian Origin",
+                            "tags": [
+                                "Export",
+                                "Import",
+                                "Domestic"
+                            ],
+                            "specs": {
+                                "Min. Order (MOQ)": "25 Metric Ton",
+                                "Type": "Corn Grits",
+                                "Packaging Type": "Gunny Bag,Jute Bag, Net Bag, PP Bag",
+                                "Packaging Size": "10-20kg, 20-25kg, 25-50kg, 5-10kg"
+                            },
+                            "paymentTerm": "L/C, D/A, D/P, T/T, Western Union"
+                        },
+                        {
+                            "name": "Basmati Rice",
+                            "image": "/perishable/food-grains/basmati-rice.png",
+                            "description": "Rice is the staple food of various countries and is used to prepare various food items. We offer superior quality Basmati Rice that is cultivated using natural seeds and technologically advanced techniques. We are known to be one of the preeminent Basmati Rice Exporters and Suppliers from India. They are packed in hygienic packaging that assures their freshness and rich flavor.",
+                            "tags": [
+                                "Export",
+                                "Import",
+                                "Domestic"
+                            ],
+                            "why": [
+                                "Long grains",
+                                "After preparation the grains remain separated",
+                                "High nutritional content",
+                                "Free from impurities",
+                                "No artificial color or polish",
+                                "Pleasant aroma"
+                            ],
+                            "usedFor": [
+                                "Making Biryani,Pulao,Dosa,Idli,etc"
+                            ],
+                            "applications": [
+                                "Household",
+                                "Food Processing Industry",
+                                "Hotels",
+                                "Restaurants",
+                                "Cosmetic Industry"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Cooking spices",
+                    "slug": "spices",
+                    "label": "Our offered product range includes a variety of premium-quality spices.",
+                    "image": "/perishable/spices/spices-collage.png",
+                    "tags": [
+                        "Export",
+                        "Import",
+                        "Domestic"
+                    ],
+                    "products": [
+                        {
+                            "name": "Spices",
+                            "image": "/perishable/spices/spices-collage.png",
+                            "description": "We are a trusted name in the industry as the major exporter of a huge assortment of Spices that are hygienic as well as safe to consume. These fresh and nutritious food spices are hygienically packaged, to retain their taste for longer duration",
+                            "tags": [
+                                "Export",
+                                "Import",
+                                "Domestic"
+                            ],
+                            "usedFor": [
+                                "Preservatives and chutneys",
+                                "Cassia",
+                                "Red chili",
+                                "Cloves",
+                                "Oriental curry powder",
+                                "Ground mixed spices",
+                                "Chinese five spice powder"
+                            ],
+                            "applications": [
+                                "Food Processing Industry",
+                                "Pharmaceutical Industry",
+                                "Hotels",
+                                "Household",
+                                "Restaurants",
+                                "Cosmetic Industry"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Chilli",
+                    "slug": "chilli",
+                    "label": "Our offered product range includes Fresh Green Chilli.",
+                    "image": "/perishable/chilli/chilli.png",
+                    "tags": [
+                        "Export",
+                        "Import",
+                        "Domestic"
+                    ],
+                    "products": [
+                        {
+                            "name": "Fresh Green Chilli",
+                            "image": "/perishable/chilli/green-chilli.png",
+                            "description": "Green chillies add a spicy touch to the foods in which they are added. We provide Fresh Green Chillies that we obtain from reliable vendors. These spicy Green Chillies are grown in well-equipped large farms. They are assured to be fresh and are packed in completely sealed packing. The clients all across the globe appreciate the taste and natural flavor of our Fresh Green Chillies.",
+                            "tags": [
+                                "Export",
+                                "Import",
+                                "Domestic"
+                            ],
+                            "why": [
+                                "Free from chemicals and artificial colors",
+                                "Rich source of Vitamin A and C",
+                                "Spicy flavor",
+                                "Available in customized packaging"
+                            ],
+                            "usedFor": [
+                                "Making spices, chutney, a variety of recipes etc."
+                            ],
+                            "applications": [
+                                "Hotels",
+                                "Restaurants",
+                                "Food Processing Industry",
+                                "Household",
+                                "Pharmaceutical Industry"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Pulses",
+                    "slug": "pulses",
+                    "label": "Our offered product range includes high-quality, protein-rich pulses.",
+                    "image": "/perishable/pulses/pulses.png",
+                    "tags": [
+                        "Export",
+                        "Import",
+                        "Domestic"
+                    ],
+                    "products": [
+                        {
+                            "name": "Pulses",
+                            "image": "/perishable/pulses/pulses.png",
+                            "description": "Avail from us an exclusive variety of Pulses that is widely appreciated by the clients, owing to its purity and freshness. As a rich source of protein, these pulses form a complete diet for intake by an individual.",
+                            "tags": [
+                                "Export",
+                                "Import",
+                                "Domestic"
+                            ],
+                            "why": [
+                                "Rich protein content",
+                                "Rich taste",
+                                "Good flavor",
+                                "Excellent height",
+                                "Purity",
+                                "Reasonable prices"
+                            ],
+                            "applications": [
+                                "Residential",
+                                "Hotels",
+                                "Food Processing Industry",
+                                "Pharmaceutical Industry",
+                                "Cosmetic Industry"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Jaggery Products",
+                    "slug": "jaggery",
+                    "label": "Our offered product range includes Jaggery Blocks, Granules, Cubes and powder.",
+                    "image": "/perishable/jaggery/jaggery.png",
+                    "tags": [
+                        "Export",
+                        "Import",
+                        "Domestic"
+                    ],
+                    "products": [
+                        {
+                            "name": "Jaggery Blocks",
+                            "image": "/perishable/jaggery/jaggery-bar.png",
+                            "description": "Jaggery Blocks are traditionally processed, chemical-free sweeteners made from pure sugarcane juice. These dense, solid blocks retain essential minerals like iron, calcium, and magnesium, making them a natural and nutritious alternative to refined sugar. Known for their deep caramel-like flavor and rich aroma, they are widely used in cooking and Ayurveda.",
+                            "tags": [
+                                "Import",
+                                "Export",
+                                "Domestic"
+                            ],
+                            "applications": [
+                                "Used in Traditional sweets, desserts and confectionary",
+                                "Added to tea,herbal drinks and local beverages",
+                                "Used in Indian Curries, sauces and marinades",
+                                "consumed as a post-meal digestive"
+                            ]
+                        },
+                        {
+                            "name": "Jaggery Cubes",
+                            "image": "/perishable/jaggery/jaggery-cubes.png",
+                            "description": "Jaggery Cubes are solid, bite-sized blocks of natural sweetener made from pure sugarcane juice. These unrefined cubes preserve the nutritional benefits of jaggery while offering convenience in handling and storage. They are ideal for portion control and traditional consumption.",
+                            "tags": [
+                                "Import",
+                                "Export",
+                                "Domestic"
+                            ],
+                            "applications": [
+                                "Eaten directly after meals for digestion",
+                                "Added to tea, kadha, or herbal drinks",
+                                "Used in traditional Indian cooking and sweets",
+                                "Ideal for health-conscious snacking"
+                            ]
+                        },
+                        {
+                            "name": "Jaggery Granules",
+                            "image": "/perishable/jaggery/jaggery-granules.png",
+                            "description": "Jaggery Granules are a natural sweetener made from concentrated sugarcane juice, processed without chemicals to preserve their nutritional benefits. These golden-brown, coarse granules dissolve easily and offer a rich, earthy sweetness with a hint of caramel. Packed with minerals like iron and magnesium, they are a healthier alternative to refined sugar and perfect for everyday use.",
+                            "tags": [
+                                "Import",
+                                "Export",
+                                "Domestic"
+                            ],
+                            "applications": [
+                                "Ideal for sweetening beverages like tea, coffee, and smoothies",
+                                "Used in Indian sweets, porridges, and traditional dishes",
+                                "Great for baking and making energy bars or snacks",
+                                "Popular in Ayurvedic and home remedies for digestion and immunity"
+                            ]
+                        },
+                        {
+                            "name": "Jaggery Powder",
+                            "image": "/perishable/jaggery/jaggery-powder.png",
+                            "description": "Jaggery Powder is a natural sweetener made from carefully processed sugarcane juice without the use of chemicals. It retains vital minerals like iron and calcium, making it a healthier alternative to refined sugar. With its fine texture and rich, caramel-like flavor, it blends easily into both traditional and modern recipes.",
+                            "tags": [
+                                "Import",
+                                "Export",
+                                "Domestic"
+                            ],
+                            "applications": [
+                                "Sweetening beverages like tea and coffee",
+                                "Used in Indian sweets, desserts, and confectionery",
+                                "Added to bakery items and health foods",
+                                "Used in Ayurvedic medicines and home remedies"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Non-Perishable",
+            "slug": "non-perishable",
+            "subcategories": [
+                {
+                    "name": "Mono Carton",
+                    "slug": "mono-carton",
+                    "label": "Our offered product range includes durable and customizable mono cartons.",
+                    "image": "/sustainable-packaging/mono-carton.png",
+                    "tags": [
+                        "Export",
+                        "Domestic"
+                    ],
+                    "products": [
+                        {
+                            "name": "Mono Cartons",
+                            "image": "/sustainable-packaging/mono-carton.png",
+                            "description": "Mono carton boxes are made from a single layer of cardboard. Mono cartons are also more eco-friendly than their multi-layered counterparts as they use less paper and ink. As a result, mono cartons are an increasingly popular choice for both businesses. Additionally, mono cartons can be printed with various colors and designs, making them highly customizable for consumers.",
+                            "tags": [
+                                "Export",
+                                "Domestic"
+                            ],
+                            "usedFor": [
+                                " Mono carton boxes are the most commonly used packaging in the retail and food industries, especially commodities in super markets and grocery shelves. Mono carton boxes are often from a single material, usually cardboard, and are very strong and durable like 300 gsm boards. Mono cartons can fold flat and be erected upright quickly, and so consume very little space in a warehouse. It can be used for various purposes, including packaging, shipping, and storage. Mono carton boxes are also very easy to assemble and disassemble, making them ideal for use in retail environments. Mono carton box packaging provides excellent protection for products and can extend the shelf life of perishable goods. Mono carton boxes are also 100% recyclable, making them an environmentally friendly choice for packaging."
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Corrugated Boxes",
+                    "slug": "corrugated-boxes",
+                    "label": "Our offered product range includes strong and reliable corrugated boxes.",
+                    "image": "/sustainable-packaging/corrugated.png",
+                    "tags": [
+                        "Export",
+                        "Domestic"
+                    ],
+                    "products": [
+                        {
+                            "name": "Corrugated Box",
+                            "image": "/sustainable-packaging/corrugated.png",
+                            "description": "Our Corrugated Boxes are crafted from high-strength materials, ensuring durability and impact resistance. These boxes are widely used for shipping, storage, and bulk packaging, providing protection against damage during transit. Available in different sizes and ply variations, they are ideal for both national and international markets.",
+                            "tags": [
+                                "Export",
+                                "Domestic"
+                            ],
+                            "specs": {
+                                "Regular Slotted Container (RSC)": "The most common box with four flaps on both sides for closure.",
+                                "Full Overlap Container (FOL)": "Similar to RSC but with outer flaps covering the full width for extra protection.",
+                                "Half Slotted Container (HSC)": "Open on one side for easy access and extra protection.Telescope Box – Two separate parts (top and bottom) that fit together, providing additional protection.",
+                                "Fold Type & Tray": " Used in food packaging, available in glued or self-locking variants. Customizable styles include slotted trays, top-flap trays, and display trays (e.g., pizza boxes)."
+                            },
+                            "applications": [
+                                "Ecommerce Packaging",
+                                "Industrial and logisttics packaging",
+                                "Storage and transporation of fragile items"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Paper Bags",
+                    "slug": "paper-bags",
+                    "label": "Our offered product range includes eco-friendly and biodegradable paper bags.",
+                    "image": "/sustainable-packaging/paper-bags.png",
+                    "tags": [
+                        "Export",
+                        "Domestic"
+                    ],
+                    "products": [
+                        {
+                            "name": "Paper Bags",
+                            "description": "We provide Paper Bags that are eco-friendly, biodegradable, and stylish. These bags are made from high-quality kraft and art paper, making them sturdy and reusable. Perfect for retail stores, bakeries, and gift packaging, they offer an excellent alternative to plastic bags.",
+                            "image": "/sustainable-packaging/paper-bags.png",
+                            "tags": [
+                                "Export",
+                                "Domestic"
+                            ],
+                            "specs": {
+                                "Flat Bags": "Simple, lightweight bags used for bakery items, medicines, and document",
+                                "D Cut Paper Bag": " Die-cut handle bags, commonly used in retail and apparel stores.",
+                                "Square Bottom Paper Bag": "Sturdy bags with a flat bottom, ideal for groceries and food packaging.",
+                                "Satchel Paper Bag": "Expandable side gussets for increased capacity, often used in pharmacies and takeaway food.",
+                                "V Bottom Paper Bag": "Triangular base design, mainly used for packing bread and lightweight items.",
+                                "Greaseproof Paper Bags": " Oil-resistant bags used for packing fast food and bakery products.",
+                                "Pinch Bottom Bag": " Sealed at one end, perfect for packaging powdered or granular items like coffee or flour.",
+                                "Mailing/Courier Bags": "Durable paper-based mailing bags used for shipping documents and lightweight products.",
+                                "Shopping Bags with Handles": " Designed for retail and fashion stores, offering a premium feel and branding opportunities.",
+                                "SOS Bags": "Self-Opening Sack bags with a flat bottom and no handles, widely used in fast-food chains and groceries."
+                            },
+                            "applications": [
+                                "Grocery and retail shopping",
+                                "Food takeaway packaging",
+                                "Promotional and gift packaging"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Paper Cups, Ripple Cups & PLA Lids",
+                    "slug": "paper-cups",
+                    "label": "Our offered product range includes high-quality, food-safe Paper Cups, Ripple Cups & PLA Lids.",
+                    "image": "/sustainable-packaging/paper-cups.png",
+                    "tags": [
+                        "Export",
+                        "Domestic"
+                    ],
+                    "products": [
+                        {
+                            "name": "Paper Cups, Ripple Cups & PLA Lids",
+                            "image": "/sustainable-packaging/paper-cups.png",
+                            "description": "We offer an eco-friendly range of paper cups and ripple cups designed for both hot and cold beverages. Crafted from food-grade paper, these cups are available in single-wall, double-wall, and ripple variants to suit different temperature needs and user preferences. The ripple cups provide enhanced insulation and grip, ideal for hot drinks like tea and coffee.Complementing these cups are our PLA lids, made from plant-based, biodegradable materials—perfect for businesses focused on sustainable practices. Together, they offer a complete, convenient, and environmentally conscious beverage packaging solution for cafes, events, and food outlets.",
+                            "tags": [
+                                "Export",
+                                "Domestic"
+                            ],
+                            "applications": [
+                                "Serving hot and cold beverages (coffee, tea, juices)",
+                                "Use in cafes, kiosks, and takeaway services",
+                                "Ideal for eco-conscious events and food stalls",
+                                "Leak-resistant lids ensure safe, on-the-go consumption"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Bagasee Products",
+                    "slug": "bagasee",
+                    "label": "Our offered product range includes sustainable and disposable bagasse products.",
+                    "image": "/sustainable-packaging/bagasee.png",
+                    "tags": [
+                        "Export",
+                        "Domestic"
+                    ],
+                    "products": [
+                        {
+                            "name": "Bagasee Products",
+                            "image": "/sustainable-packaging/bagasee.png",
+                            "description": "Our Bagasse Disposable Plates are high-quality, eco-friendly, and biodegradable alternatives to plastic and styrofoam plates. Made from natural plant fibers, they are sturdy, heat-resistant, and safe for serving both hot and cold food items. These plates are ideal for catering services, restaurants, and food delivery businesses looking for sustainable packaging solutions.",
+                            "tags": [
+                                "Export",
+                                "Domestic"
+                            ],
+                            "applications": [
+                                "Events, parties, and outdoor catering",
+                                "Food packaging for restaurants and takeaways",
+                                "Eco-conscious dining solutions"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

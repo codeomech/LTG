@@ -5,10 +5,10 @@ import FeatureCard from "./FeatureCard"; // Import the reusable component
 
 const AboutUs = () => {
   return (
-    <section className="w-full min-h-screen flex items-center justify-center">
-      <div className="container mx-auto flex py-10 px-24 flex-col md:flex-row items-center justify-between gap-24">
+    <section className="w-full md:min-h-screen flex items-center justify-center">
+      <div className="container mx-auto flex py-10 px-6 md:px-24 flex-col-reverse md:flex-row justify-center items-center gap-12 md:gap-[100px]">
         {/* Left: Feature Cards */}
-        <div className="grid grid-cols-2 gap-6 max-w-[500px] max-h-[482px]">
+        <div className="grid grid-cols-2 gap-4 md:gap-6 max-w-[500px] w-full justify-items-center">
           <FeatureCard
             icon={Globe}
             text="Global network with seamless logistics"
@@ -36,11 +36,11 @@ const AboutUs = () => {
         </div>
 
         {/* Right: About Us Text */}
-        <div className="max-w-[500px]">
-          <h2 className=" font-titillium md:text-[40px] leading-[61px] text-3xl font-bold ">
+        <div className="max-w-[500px] text-center md:text-left">
+          <h2 className="font-titillium text-2xl md:text-[40px] font-bold leading-tight md:leading-[61px]">
             About Us
           </h2>
-          <p className="mt-3 text-gray-600 font-semibold text-xl">
+          <p className="mt-3 text-[#777777] text-[20px] font-semibold md:text-xl">
             With years of expertise in import-export logistics, we bridge
             markets, ensuring smooth trade operations for our global partners.
           </p>

@@ -10,11 +10,11 @@ interface CardProps {
 const FeatureCard = ({ icon: Icon, text, bgColor, textColor }: CardProps) => {
   return (
     <div
-      className={`px-6 py-9 border-2 border-white rounded-xl shadow-md text-left flex flex-col gap-6 items-start ${bgColor}`}
+      className={`px-4 py-6 md:px-6 md:py-9 border-2 border-white rounded-xl shadow-md text-left flex flex-col gap-4 md:gap-6 items-start ${bgColor}`}
     >
-      <Icon size={36} className={`${textColor}`} />
+      <Icon size={24} className={`md:size-[36px] ${textColor}`} />
       <p
-        className={`text-[24px] leading-[32.74px] font-semibold mt-4 ${textColor}`}
+        className={`text-base md:text-[24px] leading-6 md:leading-[32.74px] font-semibold mt-2 md:mt-4 ${textColor}`}
       >
         {text}
       </p>

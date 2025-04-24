@@ -40,7 +40,7 @@ const ProductList = () => {
                 value="perishable"
                 className="w-1/2 px-5 py-1 text-[12px] md:text-base font-semibold font-nunito data-[state=active]:bg-[#333333] data-[state=active]:text-white rounded-full transition-all duration-300"
               >
-                Perishable Products
+                Agro Products
               </TabsTrigger>
               <TabsTrigger
                 value="non-perishable"

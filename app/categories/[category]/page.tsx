@@ -6,20 +6,8 @@ import CategoryNav from "@/app/components/CategoryNav";
 
 import productsData from "../../data/products.json";
 import ProductTable from "@/app/components/ProductTable";
+import { Product } from "@/app/data/Product";
 
-interface ProductCardProps {
-  product: {
-    name: string;
-    image: string;
-    tags?: string[];
-    description: string;
-    why?: string[];
-    usedFor?: string;
-    application?: string[];
-    specs?: Record<string, string>;
-    paymentTerm?: string;
-  };
-}
 export default function CategoryPage({
   params: paramsPromise,
 }: {
@@ -45,7 +33,7 @@ export default function CategoryPage({
   console.log(categoryData);
 
   return (
-    <div className="container mx-auto md:px-[60px] px-4 py-8 md:mt-16 mt-8">
+    <div className="container mx-auto lg:px-[60px] px-4 py-8 md:mt-16 mt-8">
       <h2 className="font-titillium md:text-[40px] text-3xl font-bold">
         Our Products
       </h2>
@@ -64,13 +52,13 @@ export default function CategoryPage({
           <TabsList className="bg-white rounded-full border w-full max-w-[400px] lg:max-w-[565px] border-[#E8E8E8] p-1 mx-auto ">
             <TabsTrigger
               value="perishable"
-              className="w-1/2 px-5 py-1 text-[12px] md:text-base font-semibold font-nunito data-[state=active]:bg-[#333333] data-[state=active]:text-white rounded-full transition-all duration-300"
+              className="w-1/2 px-5 py-1 text-[12px] lg:text-base font-semibold font-nunito data-[state=active]:bg-[#333333] data-[state=active]:text-white rounded-full transition-all duration-300"
             >
               Perishable Products
             </TabsTrigger>
             <TabsTrigger
               value="non-perishable"
-              className="w-1/2 px-5 py-1 text-[12px] md:text-base font-semibold font-nunito data-[state=active]:bg-[#333333] data-[state=active]:text-white rounded-full transition-all duration-300"
+              className="w-1/2 px-5 py-1 text-[12px] lg:text-base font-semibold font-nunito data-[state=active]:bg-[#333333] data-[state=active]:text-white rounded-full transition-all duration-300"
             >
               Sustainable Packaging Products
             </TabsTrigger>
@@ -96,9 +84,8 @@ export default function CategoryPage({
             </p>
           </div>
           {categoryData.products &&
-            categoryData?.products.map((product) => (
+            categoryData?.products.map((product: Product) => (
               <ProductTable
-                className="gap-6"
                 key={product.name}
                 product={{
                   name: product.name,
@@ -106,9 +93,9 @@ export default function CategoryPage({
                   image: product.image,
                   tags: product.tags || [],
                   why: product?.why || [],
-                  usedFor: product.usedFor,
-                  application: product?.applications || [],
-                  specs: product?.specs || {},
+                  usedFor: product?.usedFor || [],
+                  applications: product?.applications || [],
+                  specs: product.specs || {},
                   paymentTerm: product?.paymentTerm || "",
                 }}
               />

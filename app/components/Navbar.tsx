@@ -2,14 +2,20 @@
 
 import { useState, useEffect } from "react";
 import Image from "next/image";
-import { Menu, X } from "lucide-react";
 import { usePathname } from "next/navigation";
 import { MobileNavigation } from "./MobileNav";
 
 const Navbar = () => {
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [activeTab, setActiveTab] = useState("home");
   const pathname = usePathname();
+  const navItems = [
+    { id: "home", label: "Home" },
+    { id: "products", label: "Product" },
+    { id: "about", label: "About us" },
+  ];
 
   // Handle scroll effect
   useEffect(() => {
@@ -22,6 +28,7 @@ const Navbar = () => {
   }, []);
 
   const scrollToSection = (id: string) => {
+    setActiveTab(id);
     if (pathname !== "/") {
       // Navigate to Home with a hash (#id) instead of query parameters
       window.location.href = `/#${id}`;
@@ -65,25 +72,22 @@ const Navbar = () => {
         </div>
 
         {/* Desktop Navigation */}
+        {/* Desktop Navigation */}
         <div className="hidden md:flex gap-[60px] items-center">
-          <button
-            onClick={() => scrollToSection("home")}
-            className="font-semibold text-xl hover:text-gray-600"
-          >
-            Home
-          </button>
-          <button
-            onClick={() => scrollToSection("products")}
-            className="font-semibold text-xl hover:text-gray-600"
-          >
-            Product
-          </button>
-          <button
-            onClick={() => scrollToSection("about")}
-            className="font-semibold text-xl hover:text-gray-600"
-          >
-            About us
-          </button>
+          {navItems.map((item) => (
+            <button
+              key={item.id}
+              onClick={() => scrollToSection(item.id)}
+              className={`font-semibold text-xl px-3 py-1 rounded-full transition 
+        ${
+          activeTab === item.id
+            ? "bg-blue-100 text-blue-400"
+            : "hover:text-blue-900"
+        }`}
+            >
+              {item.label}
+            </button>
+          ))}
           <button
             onClick={() => scrollToSection("contact")}
             className="bg-gray-900 text-white font-semibold px-4 py-2 rounded-full hover:bg-gray-700 transition"

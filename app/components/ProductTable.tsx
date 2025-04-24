@@ -2,22 +2,13 @@
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import { Table, TableBody, TableCell, TableRow } from "@/components/ui/table";
+import { Product } from "../data/Product";
 
-interface ProductCardProps {
-  product: {
-    name: string;
-    image: string;
-    tags?: string[];
-    description?: string;
-    why?: string[];
-    usedFor?: string[];
-    application?: string[];
-    specs?: Record<string, string>;
-    paymentTerm?: string;
-  };
+interface ProductTableProps {
+  product: Product;
 }
 
-export default function ProductTable({ product }: ProductCardProps) {
+export default function ProductTable({ product }: ProductTableProps) {
   const contentRef = useRef<HTMLDivElement | null>(null);
   const [expanded, setExpanded] = useState(false);
   const [showToggle, setShowToggle] = useState(false);
@@ -97,13 +88,13 @@ export default function ProductTable({ product }: ProductCardProps) {
               </div>
             )}
 
-            {product.application && product.application.length > 0 && (
+            {product.applications && product.applications.length > 0 && (
               <div className="mt-4">
                 <p className="font-semibold text-[14px] text-[#777777] mb-1">
                   Applications
                 </p>
                 <ul className="list-disc text-[14px] list-inside text-[#333333] space-y-1 whitespace-pre-wrap">
-                  {product.application.map((point, idx) => (
+                  {product.applications.map((point, idx) => (
                     <li key={idx}>{point}</li>
                   ))}
                 </ul>

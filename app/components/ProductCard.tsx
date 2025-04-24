@@ -16,7 +16,7 @@ const ProductCard = ({
 }) => {
   return (
     <Link href={`/categories/${encodeURIComponent(product.slug)}`}>
-      <div>
+      <div className="justify-items-center">
         {/* Image Container */}
         <div className="group relative lg:w-[312px] lg:h-[312px] w-[180px] h-[180px] cursor-pointer overflow-hidden rounded-2xl">
           <Image
@@ -42,10 +42,11 @@ const ProductCard = ({
             <ArrowUpRight />
           </button>
         </div>
-      </div>
-      {/* Product Name */}
-      <div className="p-4">
-        <h3 className="text-lg font-bold">{product.name}</h3>
+
+        {/* Product Name */}
+        <div className="p-4">
+          <h3 className="text-lg font-bold">{product.name}</h3>
+        </div>
       </div>
     </Link>
   );

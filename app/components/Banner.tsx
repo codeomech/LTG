@@ -18,11 +18,12 @@ const Banner = () => {
       <div className="flex flex-col max-w-4xl w-full mx-auto items-center justify-center gap-6 text-center">
         <div>
           <h2 className="font-titillium text-2xl md:text-4xl font-bold leading-tight md:leading-[61px]">
-            Didn't find the product you need?
+            Didn&apos;t find the product you need?
           </h2>
           <p className="mt-3 text-[#777777] md:text-[20px] font-semibold text-base">
-            We source a wide range of items beyond what's listed. Share your
-            requirements with us, and we'll do our best to fulfill your request.
+            We source a wide range of items beyond what&apos;s listed. Share
+            your requirements with us, and we&apos;ll do our best to fulfill
+            your request.
           </p>
         </div>
         <Button

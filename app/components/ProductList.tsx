@@ -60,7 +60,7 @@ const ProductList = () => {
           </TabsContent>
 
           <TabsContent value="non-perishable">
-            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6 mt-6 justify-items-center">
+            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6 mt-6">
               {categoryData?.subcategories.map((subcategory, index) => (
                 <ProductCard key={index} product={subcategory} />
               ))}

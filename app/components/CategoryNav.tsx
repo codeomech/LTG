@@ -26,15 +26,15 @@ const CategoryNav = ({
         return (
           <Link key={index} href={`/categories/${subcategory.slug}`}>
             <div className="cursor-pointer flex flex-col items-center">
-              <img
-                src={subcategory.image}
-                alt={subcategory.name}
-                className={`w-20 h-20 rounded-full border-4 transition-all ${
+              <div
+                style={{ backgroundImage: `url(${subcategory.image})` }}
+                className={`w-20 h-20 bg-center bg-cover rounded-full border-4 transition-all ${
                   isActive
-                    ? "border-blue-500 scale-105"
+                    ? "border-[#13BBFF] scale-105"
                     : "border-gray-200 hover:border-gray-400"
                 }`}
               />
+
               <span className="text-sm mt-2 font-semibold truncate max-w-[100px] text-center">
                 {subcategory.name}
               </span>

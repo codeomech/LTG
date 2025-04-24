@@ -1,11 +1,10 @@
 "use client";
 
-import Image from "next/image";
 import Home from "./components/Home";
 import ProductList from "./components/ProductList";
 import AboutUs from "./components/AboutUs";
 import ContactUs from "./components/ContactUs";
-import { usePathname, useSearchParams } from "next/navigation";
+import { usePathname } from "next/navigation";
 import { useEffect } from "react";
 import Banner from "./components/Banner";
 

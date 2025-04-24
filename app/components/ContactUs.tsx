@@ -1,6 +1,6 @@
 "use client";
 
-import { useForm } from "react-hook-form";
+import { FormProvider, useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { contactSchema, ContactFormType } from "../validations/contactSchema";
 import { Input } from "@/components/ui/input";
@@ -10,18 +10,25 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Mail, Phone } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 // import emailjs from "@emailjs/browser";
-import { useRef } from "react";
+// import { useRef } from "react";
+import ProductMultiSelect from "./ProductMultiSelect";
 
 export default function ContactUs() {
   const {
     register,
     handleSubmit,
     formState: { errors },
-    watch,
     reset,
   } = useForm({
     resolver: zodResolver(contactSchema),
     mode: "onChange", // 👈 important for instant validation
+  });
+
+  const methods = useForm({
+    defaultValues: {
+      interestedProducts: [],
+    },
+    mode: "onChange",
   });
 
   const { toast } = useToast();
@@ -84,121 +91,122 @@ export default function ContactUs() {
             <h3 className="text-2xl font-titillium font-bold text-gray-800">
               Get in touch
             </h3>
+            <FormProvider {...methods}>
+              <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
+                {/* First & Last Name */}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700">
+                      First Name
+                    </label>
+                    <Input
+                      {...register("firstName")}
+                      placeholder="Enter First Name"
+                      className="mt-1 rounded-xl shadow-sm border-solid border-gray-200"
+                    />
+                    {errors.firstName && (
+                      <p className="text-red-500 text-sm">
+                        {errors.firstName.message}
+                      </p>
+                    )}
+                  </div>
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700">
+                      Last Name
+                    </label>
+                    <Input
+                      {...register("lastName")}
+                      placeholder="Enter Last Name"
+                      className="mt-1 rounded-xl shadow-sm border-solid border-gray-200"
+                    />
+                    {errors.lastName && (
+                      <p className="text-red-500 text-sm">
+                        {errors.lastName.message}
+                      </p>
+                    )}
+                  </div>
+                </div>
 
-            <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
-              {/* First & Last Name */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                {/* Company & Product Info */}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700">
+                      Company Name
+                    </label>
+                    <Input
+                      {...register("companyName")}
+                      placeholder="Enter Company Name"
+                      className="mt-1 rounded-xl shadow-sm border-solid border-gray-200"
+                    />
+                  </div>
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700">
+                      Product Information
+                    </label>
+                    <ProductMultiSelect />
+                  </div>
+                </div>
+
+                {/* Email */}
                 <div>
                   <label className="block text-sm font-medium text-gray-700">
-                    First Name
+                    Email
                   </label>
                   <Input
-                    {...register("firstName")}
-                    placeholder="Enter First Name"
+                    {...register("email")}
+                    placeholder="Enter email"
                     className="mt-1 rounded-xl shadow-sm border-solid border-gray-200"
                   />
-                  {errors.firstName && (
+                  {errors.email && (
                     <p className="text-red-500 text-sm">
-                      {errors.firstName.message}
+                      {errors.email.message}
                     </p>
                   )}
                 </div>
+
+                {/* Phone */}
                 <div>
                   <label className="block text-sm font-medium text-gray-700">
-                    Last Name
+                    Phone no.
                   </label>
                   <Input
-                    {...register("lastName")}
-                    placeholder="Enter Last Name"
+                    {...register("phone")}
+                    placeholder="+91"
                     className="mt-1 rounded-xl shadow-sm border-solid border-gray-200"
                   />
-                  {errors.lastName && (
+                  {errors.phone && (
                     <p className="text-red-500 text-sm">
-                      {errors.lastName.message}
+                      {errors.phone.message}
                     </p>
                   )}
                 </div>
-              </div>
 
-              {/* Company & Product Info */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                {/* Message */}
                 <div>
                   <label className="block text-sm font-medium text-gray-700">
-                    Company Name
+                    How can we help?
                   </label>
-                  <Input
-                    {...register("companyName")}
-                    placeholder="Enter Company Name"
+                  <Textarea
+                    {...register("message")}
+                    placeholder="Type your message"
                     className="mt-1 rounded-xl shadow-sm border-solid border-gray-200"
                   />
+                  {errors.message && (
+                    <p className="text-red-500 text-sm">
+                      {errors.message.message}
+                    </p>
+                  )}
                 </div>
-                <div>
-                  <label className="block text-sm font-medium text-gray-700">
-                    Product Information
-                  </label>
-                  <Input
-                    {...register("productInfo")}
-                    placeholder="Product Info"
-                    className="mt-1 rounded-xl shadow-sm border-solid border-gray-200"
-                  />
-                </div>
-              </div>
 
-              {/* Email */}
-              <div>
-                <label className="block text-sm font-medium text-gray-700">
-                  Email
-                </label>
-                <Input
-                  {...register("email")}
-                  placeholder="Enter email"
-                  className="mt-1 rounded-xl shadow-sm border-solid border-gray-200"
-                />
-                {errors.email && (
-                  <p className="text-red-500 text-sm">{errors.email.message}</p>
-                )}
-              </div>
-
-              {/* Phone */}
-              <div>
-                <label className="block text-sm font-medium text-gray-700">
-                  Phone no.
-                </label>
-                <Input
-                  {...register("phone")}
-                  placeholder="+91"
-                  className="mt-1 rounded-xl shadow-sm border-solid border-gray-200"
-                />
-                {errors.phone && (
-                  <p className="text-red-500 text-sm">{errors.phone.message}</p>
-                )}
-              </div>
-
-              {/* Message */}
-              <div>
-                <label className="block text-sm font-medium text-gray-700">
-                  How can we help?
-                </label>
-                <Textarea
-                  {...register("message")}
-                  placeholder="Type your message"
-                  className="mt-1 rounded-xl shadow-sm border-solid border-gray-200"
-                />
-                {errors.message && (
-                  <p className="text-red-500 text-sm">
-                    {errors.message.message}
-                  </p>
-                )}
-              </div>
-
-              {/* Submit Button */}
-              <Button
-                type="submit"
-                className="w-full bg-[#333333] text-white hover:bg-gray-600"
-              >
-                Submit
-              </Button>
-            </form>
+                {/* Submit Button */}
+                <Button
+                  type="submit"
+                  className="w-full bg-[#333333] text-white hover:bg-gray-600"
+                >
+                  Submit
+                </Button>
+              </form>
+            </FormProvider>
           </CardContent>
         </Card>
       </div>

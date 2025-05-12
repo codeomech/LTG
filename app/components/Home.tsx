@@ -15,16 +15,17 @@ const Home = () => {
   };
 
   return (
-    <section className="w-full md:min-h-screen mt-6 md:mt-20 flex md:items-center">
-      <div className="w-full flex flex-col md:flex-row items-center justify-between px-6 md:px-12 lg:px-[60px] gap-10 md:gap-20">
+    <section className="w-full md:min-h-screen mt-6 lg:mt-20 flex md:items-center">
+      <div className="w-full flex flex-col lg:flex-row items-center justify-between px-6 lg:px-[60px] gap-10 md:gap-20">
         {/* Left Content */}
-        <div className="flex flex-col items-center md:items-start text-center md:text-left gap-6 md:gap-10">
+        <div className="flex flex-col items-center lg:items-start text-center lg:text-left gap-6 md:gap-10">
           <h1 className="font-titillium text-[32px] md:text-[64px] font-bold leading-tight md:leading-[70px]">
             Global Trade, <br /> Seamless & Reliable
           </h1>
           <p className="text-[#777777] font-bold text-[14px] md:text-[20px] max-w-lg">
             Connecting businesses worldwide with high-quality{" "}
-            <span className="font-semibold text-[#333333]">Perishable</span> and{" "}
+            <span className="font-semibold text-[#333333]">Agro Poducts</span>{" "}
+            and{" "}
             <span className="font-semibold text-[#333333]">
               Sustainable Packaging
             </span>{" "}

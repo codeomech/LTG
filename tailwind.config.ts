@@ -9,6 +9,9 @@ export default {
   ],
   theme: {
     extend: {
+      screens: {
+        xs: "480px", // Add this line to define the 'xs' breakpoint at 480px
+      },
       fontFamily: {
         nunito: "var(--font-nunito), sans-serif",
         titillium: "var(--font-titillium), sans-serif",

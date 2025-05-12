@@ -50,7 +50,7 @@ const Navbar = () => {
     border-b border-white/20 
     bg-white/40 backdrop-blur-lg 
     shadow-md transition-all duration-300 ease-in-out 
-    h-[58px] px-[20px] pb-[20px] pt-3 
+    h-[60px] px-[20px] pb-[20px] pt-3 
     lg:h-[110px] lg:px-[60px] lg:py-[30px]
     ${isScrolled ? "backdrop-blur-lg" : "backdrop-blur-none"}
   `}
@@ -73,7 +73,7 @@ const Navbar = () => {
 
         {/* Desktop Navigation */}
         {/* Desktop Navigation */}
-        <div className="hidden md:flex gap-[60px] items-center">
+        <div className="hidden lg:flex gap-[60px] items-center">
           {navItems.map((item) => (
             <button
               key={item.id}

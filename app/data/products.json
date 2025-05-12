@@ -669,7 +669,8 @@
                             "specs": {
                                 "Regular Slotted Container (RSC)": "The most common box with four flaps on both sides for closure.",
                                 "Full Overlap Container (FOL)": "Similar to RSC but with outer flaps covering the full width for extra protection.",
-                                "Half Slotted Container (HSC)": "Open on one side for easy access and extra protection.Telescope Box – Two separate parts (top and bottom) that fit together, providing additional protection.",
+                                "Half Slotted Container (HSC)": "Open on one side for easy access and extra protection",
+                                "Telescope Box": "Two separate parts (top and bottom) that fit together, providing additional protection.",
                                 "Fold Type & Tray": " Used in food packaging, available in glued or self-locking variants. Customizable styles include slotted trays, top-flap trays, and display trays (e.g., pizza boxes)."
                             },
                             "applications": [

@@ -1,8 +1,52 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
-import React from "react";
+import React, { useEffect, useRef } from "react";
+import { gsap } from "gsap";
+import Image from "next/image";
+import bananaImg from "../../public/Images/single-banana.jpg";
+import carrotImg from "../../public/Images/apple.png";
+import onionImg from "../../public/Images/onion-slice.png";
+import pineappleImg from "../../public/Images/pineapple.png";
 
 const Banner = () => {
+  const bananaRef = useRef(null);
+  const carrotRef = useRef(null);
+  const onionRef = useRef(null);
+  const pineappleRef = useRef(null);
+  useEffect(() => {
+    // Floating animation
+    gsap.to(bananaRef.current, {
+      y: -20,
+      duration: 2,
+      repeat: -1,
+      yoyo: true,
+      ease: "power1.inOut",
+    });
+
+    gsap.to(onionRef.current, {
+      x: 30,
+      duration: 2,
+      repeat: -1,
+      yoyo: true,
+      ease: "power1.inOut",
+    });
+
+    gsap.to(pineappleRef.current, {
+      y: 30,
+      duration: 2,
+      repeat: -1,
+      yoyo: true,
+      ease: "power1.inOut",
+    });
+
+    gsap.to(carrotRef.current, {
+      y: 20,
+      duration: 3,
+      repeat: -1,
+      yoyo: true,
+      ease: "power1.inOut",
+    });
+  }, []);
   const scrollToSection = (id: string) => {
     const section = document.getElementById(id);
     if (section) {
@@ -14,7 +58,31 @@ const Banner = () => {
   };
 
   return (
-    <div className="w-full py-10 px-4 md:px-8 lg:px-80 bg-white">
+    <div className="w-full py-10 px-4 md:px-8 lg:px-80 bg-white relative overflow-hidden">
+      <Image
+        src={bananaImg}
+        ref={bananaRef}
+        className="absolute top-4 left-10 w-20 z-0 pointer-events-none"
+        alt="banana"
+      />
+      <Image
+        src={onionImg}
+        ref={onionRef}
+        className="absolute bottom-12 right-70 w-20 z-0 pointer-events-none"
+        alt="onion"
+      />
+      <Image
+        src={carrotImg}
+        ref={carrotRef}
+        className="absolute bottom-10 right-10 w-16 z-0 pointer-events-none"
+        alt="carrot"
+      />
+      <Image
+        src={pineappleImg}
+        ref={pineappleRef}
+        className="absolute top-0 right-28 w-16 z-0 pointer-events-none"
+        alt="pineapple"
+      />
       <div className="flex flex-col max-w-4xl w-full mx-auto items-center justify-center gap-6 text-center">
         <div>
           <h2 className="font-titillium text-2xl md:text-4xl font-bold leading-tight md:leading-[61px]">

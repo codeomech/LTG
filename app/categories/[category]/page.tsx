@@ -1,12 +1,12 @@
 "use client";
 
-import { use, useState } from "react";
+import { use, useEffect, useState } from "react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import CategoryNav from "@/app/components/CategoryNav";
 
 import productsData from "../../data/products.json";
 import ProductTable from "@/app/components/ProductTable";
-import { Product } from "@/app/data/Product";
+import { Product } from "@/app/data/ProductSchema";
 
 export default function CategoryPage({
   params: paramsPromise,
@@ -26,11 +26,35 @@ export default function CategoryPage({
     (initialCategory?.slug as "perishable" | "non-perishable") || "perishable"
   );
 
-  const categoryData = initialCategory?.subcategories.find(
-    (subCat) => subCat.slug === decodedCategory
-  );
+  // Track the active subcategory
+  const [activeSubcategory, setActiveSubcategory] = useState(decodedCategory);
 
-  console.log(categoryData);
+  // Track if the tab was changed by user interaction (not during initial load)
+  const [wasTabChangedByUser, setWasTabChangedByUser] = useState(false);
+
+  // When tab changes, set active subcategory to first subcategory of the new tab
+  // BUT only if the tab was changed by user interaction
+  useEffect(() => {
+    if (wasTabChangedByUser) {
+      const firstSubcategoryOfTab = productsData.categories.find(
+        (cat) => cat.slug === activeTab
+      )?.subcategories[0]?.slug;
+
+      if (firstSubcategoryOfTab) {
+        setActiveSubcategory(firstSubcategoryOfTab);
+      }
+    }
+  }, [activeTab, wasTabChangedByUser]);
+
+  // Find the current category data based on activeTab and activeSubcategory
+  const categoryData = productsData.categories
+    .find((cat) => cat.slug === activeTab)
+    ?.subcategories.find((subCat) => subCat.slug === activeSubcategory);
+
+  // Handle category change from CategoryNav
+  const handleCategoryChange = (subcategorySlug: string) => {
+    setActiveSubcategory(subcategorySlug);
+  };
 
   return (
     <div className="container mx-auto lg:px-[60px] px-4 py-8 md:mt-16 mt-8">
@@ -44,9 +68,10 @@ export default function CategoryPage({
       <Tabs
         defaultValue={activeTab}
         className="w-full"
-        onValueChange={(value) =>
-          setActiveTab(value as "perishable" | "non-perishable")
-        }
+        onValueChange={(value) => {
+          setWasTabChangedByUser(true);
+          setActiveTab(value as "perishable" | "non-perishable");
+        }}
       >
         <div className="mt-6">
           <TabsList className="bg-white rounded-full border w-full max-w-[400px] lg:max-w-[565px] border-[#E8E8E8] p-1 mx-auto ">
@@ -66,11 +91,19 @@ export default function CategoryPage({
         </div>
 
         <TabsContent value="perishable">
-          <CategoryNav activeTab="perishable" />
+          <CategoryNav
+            activeTab="perishable"
+            activeSubcategory={activeSubcategory}
+            onCategoryChange={handleCategoryChange}
+          />
         </TabsContent>
 
         <TabsContent value="non-perishable">
-          <CategoryNav activeTab="non-perishable" />
+          <CategoryNav
+            activeTab="non-perishable"
+            activeSubcategory={activeSubcategory}
+            onCategoryChange={handleCategoryChange}
+          />
         </TabsContent>
       </Tabs>
 

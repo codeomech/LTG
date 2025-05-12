@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --foreground: 0 0% 20%;
+  --border: 0 0% 80%;
+  --ring: 217 91% 60%;
+}
+
 body {
   @apply font-nunito;
   background-color: #ebf8ff;
@@ -20,7 +26,7 @@ html {
     @apply border-border outline-ring/50;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background;
   }
 }
 

@@ -26,18 +26,6 @@ const ProductCard = ({
             loading="lazy"
             className="object-cover transition-transform duration-300 group-hover:scale-125"
           />
-          {/* Tags */}
-          {/* <div className="absolute bottom-3 left-3 hidden lg:flex gap-2">
-            {product.tags.map((tag, index) => (
-              <span
-                key={index}
-                className="bg-black/40 text-white px-3 py-1 text-sm rounded-full"
-              >
-                {tag}
-              </span>
-            ))}
-          </div> */}
-          {/* Arrow Button */}
           <button className="absolute top-3 right-3 bg-black/40 text-white p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300">
             <ArrowUpRight />
           </button>

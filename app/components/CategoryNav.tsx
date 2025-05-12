@@ -6,11 +6,17 @@ import productsData from "../data/products.json";
 
 const CategoryNav = ({
   activeTab,
+  activeSubcategory,
+  onCategoryChange,
 }: {
   activeTab: "perishable" | "non-perishable";
+  activeSubcategory?: string;
+  onCategoryChange?: (subcategory: string) => void;
 }) => {
   const pathname = usePathname();
-  const decodedCategory = pathname.split("/categories/")[1];
+  // If activeSubcategory is provided, use it; otherwise extract from pathname
+  const decodedCategory =
+    activeSubcategory || pathname.split("/categories/")[1];
 
   const categoryData = productsData.categories.find(
     (category) => category.slug === activeTab
@@ -18,13 +24,25 @@ const CategoryNav = ({
 
   if (!categoryData) return null;
 
+  const handleCategoryClick = (slug: string, e: React.MouseEvent) => {
+    if (onCategoryChange) {
+      e.preventDefault(); // Prevent default Link behavior when using client-side navigation
+      onCategoryChange(slug);
+    }
+    // If onCategoryChange is not provided, Link will handle navigation normally
+  };
+
   return (
     <div className="flex space-x-4 overflow-x-auto scrollbar-hide py-4">
       {categoryData.subcategories.map((subcategory, index) => {
         const isActive = subcategory.slug === decodedCategory;
 
         return (
-          <Link key={index} href={`/categories/${subcategory.slug}`}>
+          <Link
+            key={index}
+            href={`/categories/${subcategory.slug}`}
+            onClick={(e) => handleCategoryClick(subcategory.slug, e)}
+          >
             <div className="cursor-pointer flex flex-col items-center">
               <div
                 style={{ backgroundImage: `url(${subcategory.image})` }}

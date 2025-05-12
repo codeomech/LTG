@@ -17,7 +17,7 @@ const ProductList = () => {
   );
 
   return (
-    <div className="w-full min-h-screen flex flex-col items-center mx-auto lg:px-14 lg:py-10 justify-center">
+    <div className="w-full min-h-screen flex flex-col items-center mx-auto lg:px-14 lg:py-10 px-3 justify-center">
       <div className="text-center mb-6">
         <h2 className="font-titillium md:text-[40px] text-3xl font-bold">
           Our Products
@@ -35,16 +35,16 @@ const ProductList = () => {
           }
         >
           <div className="flex justify-center">
-            <TabsList className="bg-white rounded-full border w-full max-w-[400px] lg:max-w-[565px] border-[#E8E8E8] p-1 mx-auto ">
+            <TabsList className="bg-white rounded-full border w-full max-w-[400px] h-[44px] lg:max-w-[565px] border-[#E8E8E8] p-1 mx-auto ">
               <TabsTrigger
                 value="perishable"
-                className="w-1/2 px-5 py-1 text-[12px] md:text-base font-semibold font-nunito data-[state=active]:bg-[#333333] data-[state=active]:text-white rounded-full transition-all duration-300"
+                className="w-1/2 px-5 py-1 text-[12px] leading-[24px] tracking-[0px] md:text-base md:font-semibold font-nunito data-[state=active]:bg-[#333333] data-[state=active]:text-white rounded-full transition-all duration-300"
               >
                 Agro Products
               </TabsTrigger>
               <TabsTrigger
                 value="non-perishable"
-                className="w-1/2 px-5 py-1 text-[12px] md:text-base font-semibold font-nunito data-[state=active]:bg-[#333333] data-[state=active]:text-white rounded-full transition-all duration-300"
+                className="w-1/2 px-5 py-1 text-[12px] leading-[24px] tracking-[0px] md:text-base md:font-semibold font-nunito data-[state=active]:bg-[#333333] data-[state=active]:text-white rounded-full transition-all duration-300"
               >
                 Sustainable Packaging Products
               </TabsTrigger>

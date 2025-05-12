@@ -2,7 +2,7 @@
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import { Table, TableBody, TableCell, TableRow } from "@/components/ui/table";
-import { Product } from "../data/Product";
+import { Product } from "../data/ProductSchema";
 
 interface ProductTableProps {
   product: Product;
@@ -45,7 +45,7 @@ export default function ProductTable({ product }: ProductTableProps) {
               </p>
             )}
 
-            {product?.tags && product.tags.length > 0 && (
+            {/* {product?.tags && product.tags.length > 0 && (
               <div className="mt-6">
                 <Table className="w-full border border-gray-300">
                   <TableBody>
@@ -60,7 +60,7 @@ export default function ProductTable({ product }: ProductTableProps) {
                   </TableBody>
                 </Table>
               </div>
-            )}
+            )} */}
 
             {product.why && product.why.length > 0 && (
               <div className="mt-4">

@@ -2,7 +2,7 @@
 
 import { FormProvider, useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { contactSchema, ContactFormType } from "../validations/contactSchema";
+
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
@@ -12,29 +12,34 @@ import { useToast } from "@/hooks/use-toast";
 // import emailjs from "@emailjs/browser";
 // import { useRef } from "react";
 import ProductMultiSelect from "./ProductMultiSelect";
+import { ContactFormType, contactSchema } from "../data/contactSchema";
 
 export default function ContactUs() {
+  const methods = useForm({
+    resolver: zodResolver(contactSchema),
+    defaultValues: {
+      firstName: "",
+      lastName: "",
+      companyName: "",
+      email: "",
+      phone: "",
+      message: "",
+      interestedProducts: [],
+    },
+    mode: "onChange", // for instant validation
+  });
+
   const {
     register,
     handleSubmit,
     formState: { errors },
     reset,
-  } = useForm({
-    resolver: zodResolver(contactSchema),
-    mode: "onChange", // 👈 important for instant validation
-  });
-
-  const methods = useForm({
-    defaultValues: {
-      interestedProducts: [],
-    },
-    mode: "onChange",
-  });
-
+  } = methods;
   const { toast } = useToast();
 
   const onSubmit = async (data: ContactFormType) => {
     console.log("Form Submit Succesfully", data);
+    console.log("Selected products:", data.interestedProducts);
     toast({
       title: "Success!",
       description: "Message sent successfully.",
@@ -59,7 +64,7 @@ export default function ContactUs() {
 
   return (
     <div className="w-full md:min-h-screen flex items-center justify-center ">
-      <div className=" container mx-auto flex flex-col py-10 px-6 md:px-24 md:flex-row justify-center gap-12 md:gap-24">
+      <div className=" container mx-auto flex flex-col py-10 px-6 md:px-24 lg:flex-row justify-center gap-12 md:gap-24">
         {/* Left Section */}
         <div className="flex-1 md:max-w-[500px] text-center md:text-left">
           <h2 className="text-[24px] md:text-[40px] font-titillium font-bold text-[#333333]">
@@ -70,17 +75,23 @@ export default function ContactUs() {
             strategic trade partnerships.
           </p>
           <div className="mt-6 flex lg:flex-col justify-between lg:space-y-4 ">
-            <div className="flex items-center gap-x-2 text-[#333333]">
+            <div className="flex items-center gap-x-2 text-[#333333] cursor-pointer">
               <Mail size={20} />
-              <span className="text-[16px] md:text-[20px] font-semibold break-words">
+              <a
+                href="mailto:trade@lgtglobal.com"
+                className="text-[16px] md:text-[20px] font-semibold break-words"
+              >
                 trade@lgtglobal.com
-              </span>
+              </a>
             </div>
-            <div className="flex items-center gap-x-2 text-[#333333]">
+            <div className="flex items-center gap-x-2 text-[#333333] cursor-pointer">
               <Phone size={20} />
-              <span className="text-[16px] md:text-[20px] font-semibold break-words">
+              <a
+                href="tel:919876543210"
+                className="text-[16px] md:text-[20px] font-semibold break-words"
+              >
                 +91 9876 543 210
-              </span>
+              </a>
             </div>
           </div>
         </div>
@@ -141,9 +152,14 @@ export default function ContactUs() {
                   </div>
                   <div>
                     <label className="block text-sm font-medium text-gray-700">
-                      Product Information
+                      Products of Interest
                     </label>
                     <ProductMultiSelect />
+                    {errors.interestedProducts && (
+                      <p className="text-red-500 text-sm">
+                        {errors.interestedProducts.message}
+                      </p>
+                    )}
                   </div>
                 </div>
 

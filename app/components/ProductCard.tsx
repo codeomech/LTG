@@ -30,11 +30,10 @@ const ProductCard = ({
             <ArrowUpRight />
           </button>
         </div>
-
-        {/* Product Name */}
-        <div className="p-4">
-          <h3 className="text-lg font-bold">{product.name}</h3>
-        </div>
+      </div>
+      {/* Product Name */}
+      <div className="p-4 justify-start">
+        <h3 className="text-[20px] font-bold text-[#333333]">{product.name}</h3>
       </div>
     </Link>
   );

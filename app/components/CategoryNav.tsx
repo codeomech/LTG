@@ -33,7 +33,7 @@ const CategoryNav = ({
   };
 
   return (
-    <div className="flex space-x-4 overflow-x-auto scrollbar-hide py-4">
+    <div className="flex space-x-6 overflow-x-auto scrollbar-hide py-4">
       {categoryData.subcategories.map((subcategory, index) => {
         const isActive = subcategory.slug === decodedCategory;
 

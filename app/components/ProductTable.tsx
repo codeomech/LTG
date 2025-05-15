@@ -67,7 +67,7 @@ export default function ProductTable({ product }: ProductTableProps) {
                 <p className="font-semibold text-[14px] text-[#777777] mb-1">
                   Why our {product.name}?
                 </p>
-                <ul className="list-disc text-[14px] list-inside text-[#333333] space-y-1 whitespace-pre-wrap">
+                <ul className="list-disc text-[14px] list-inside font-semibold text-[#333333] space-y-1 whitespace-pre-wrap">
                   {product.why.map((point, idx) => (
                     <li key={idx}>{point}</li>
                   ))}
@@ -80,7 +80,7 @@ export default function ProductTable({ product }: ProductTableProps) {
                 <p className="font-semibold text-[14px] text-[#777777] mb-1">
                   Used For
                 </p>
-                <ul className="list-disc text-[14px] list-inside text-[#333333] space-y-1 whitespace-pre-wrap">
+                <ul className="list-disc text-[14px] list-inside font-semibold text-[#333333] space-y-1 whitespace-pre-wrap">
                   {product.usedFor.map((point, idx) => (
                     <li key={idx}>{point}</li>
                   ))}

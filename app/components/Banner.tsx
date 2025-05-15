@@ -62,25 +62,25 @@ const Banner = () => {
       <Image
         src={bananaImg}
         ref={bananaRef}
-        className="absolute top-4 left-10 w-20 z-0 pointer-events-none"
+        className="absolute top-4 left-10 w-20 z-0 pointer-events-none hidden lg:block"
         alt="banana"
       />
       <Image
         src={onionImg}
         ref={onionRef}
-        className="absolute bottom-12 right-70 w-20 z-0 pointer-events-none"
+        className="absolute bottom-12 right-70 w-20 z-0 pointer-events-none hidden lg:block"
         alt="onion"
       />
       <Image
         src={carrotImg}
         ref={carrotRef}
-        className="absolute bottom-10 right-10 w-16 z-0 pointer-events-none"
+        className="absolute bottom-10 right-10 w-16 z-0 pointer-events-none hidden lg:block"
         alt="carrot"
       />
       <Image
         src={pineappleImg}
         ref={pineappleRef}
-        className="absolute top-0 right-28 w-16 z-0 pointer-events-none"
+        className="absolute top-0 right-28 w-16 z-0 pointer-events-none hidden lg:block"
         alt="pineapple"
       />
       <div className="flex flex-col max-w-4xl w-full mx-auto items-center justify-center gap-6 text-center">
@@ -96,7 +96,7 @@ const Banner = () => {
         </div>
         <Button
           onClick={() => scrollToSection("contact")}
-          className="w-[225px] h-[52px] flex items-center pr-[10px] pl-4 py-[10px] bg-[#333333] text-white rounded-full text-[16px] hover:bg-gray-700 transition"
+          className="w-[225px] h-[52px] flex items-center pr-[10px] bg-[#333333] text-white rounded-full text-[16px] hover:bg-gray-700 transition"
         >
           <span>Request a Product</span>
 

@@ -97,8 +97,8 @@ export default function ContactUs() {
         </div>
 
         {/* Right Section - Contact Form */}
-        <Card className="flex-1 p-6 shadow-lg border-none rounded-xl bg-white md:max-w-[600px]">
-          <CardContent className="space-y-4">
+        <Card className="flex-1 shadow-lg border-none rounded-xl bg-white md:max-w-[600px]">
+          <CardContent className="p-6 pt-6 space-y-4">
             <h3 className="text-2xl font-titillium font-bold text-gray-800">
               Get in touch
             </h3>
@@ -113,7 +113,7 @@ export default function ContactUs() {
                     <Input
                       {...register("firstName")}
                       placeholder="Enter First Name"
-                      className="mt-1 rounded-xl shadow-sm border-solid border-gray-200"
+                      className="mt-1 rounded-xl shadow-sm border-solid border-gray-200 font-semibold text-[#777777]"
                     />
                     {errors.firstName && (
                       <p className="text-red-500 text-sm">
@@ -128,7 +128,7 @@ export default function ContactUs() {
                     <Input
                       {...register("lastName")}
                       placeholder="Enter Last Name"
-                      className="mt-1 rounded-xl shadow-sm border-solid border-gray-200"
+                      className="mt-1 rounded-xl shadow-sm border-solid border-gray-200 font-semibold text-[#777777] "
                     />
                     {errors.lastName && (
                       <p className="text-red-500 text-sm">
@@ -147,7 +147,7 @@ export default function ContactUs() {
                     <Input
                       {...register("companyName")}
                       placeholder="Enter Company Name"
-                      className="mt-1 rounded-xl shadow-sm border-solid border-gray-200"
+                      className="mt-1 rounded-xl shadow-sm border-solid border-gray-200 font-semibold text-[#777777]"
                     />
                   </div>
                   <div>
@@ -171,7 +171,7 @@ export default function ContactUs() {
                   <Input
                     {...register("email")}
                     placeholder="Enter email"
-                    className="mt-1 rounded-xl shadow-sm border-solid border-gray-200"
+                    className="mt-1 rounded-xl shadow-sm border-solid border-gray-200 font-semibold text-[#777777]"
                   />
                   {errors.email && (
                     <p className="text-red-500 text-sm">
@@ -188,7 +188,7 @@ export default function ContactUs() {
                   <Input
                     {...register("phone")}
                     placeholder="+91"
-                    className="mt-1 rounded-xl shadow-sm border-solid border-gray-200"
+                    className="mt-1 rounded-xl shadow-sm border-solid border-gray-200 font-semibold text-[#777777]"
                   />
                   {errors.phone && (
                     <p className="text-red-500 text-sm">
@@ -205,7 +205,7 @@ export default function ContactUs() {
                   <Textarea
                     {...register("message")}
                     placeholder="Type your message"
-                    className="mt-1 rounded-xl shadow-sm border-solid border-gray-200"
+                    className="mt-1 rounded-xl shadow-sm border-solid border-gray-200 font-semibold text-[#777777]"
                   />
                   {errors.message && (
                     <p className="text-red-500 text-sm">
@@ -217,7 +217,7 @@ export default function ContactUs() {
                 {/* Submit Button */}
                 <Button
                   type="submit"
-                  className="w-full bg-[#333333] text-white hover:bg-gray-600"
+                  className="w-full bg-[#333333] text-white rounded-[8px] hover:bg-gray-600"
                 >
                   Submit
                 </Button>

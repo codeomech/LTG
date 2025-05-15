@@ -28,11 +28,11 @@ export default function ContactUs() {
     },
     mode: "onChange", // for instant validation
   });
-
+  const errorClass = "text-red-500 text-sm mt-1";
   const {
     register,
     handleSubmit,
-    formState: { errors },
+    formState: { errors, isValid },
     reset,
   } = methods;
   const { toast } = useToast();
@@ -116,9 +116,7 @@ export default function ContactUs() {
                       className="mt-1 rounded-xl shadow-sm border-solid border-gray-200 font-semibold text-[#777777]"
                     />
                     {errors.firstName && (
-                      <p className="text-red-500 text-sm">
-                        {errors.firstName.message}
-                      </p>
+                      <p className={errorClass}>{errors.firstName.message}</p>
                     )}
                   </div>
                   <div>
@@ -131,9 +129,7 @@ export default function ContactUs() {
                       className="mt-1 rounded-xl shadow-sm border-solid border-gray-200 font-semibold text-[#777777] "
                     />
                     {errors.lastName && (
-                      <p className="text-red-500 text-sm">
-                        {errors.lastName.message}
-                      </p>
+                      <p className={errorClass}>{errors.lastName.message}</p>
                     )}
                   </div>
                 </div>
@@ -149,17 +145,20 @@ export default function ContactUs() {
                       placeholder="Enter Company Name"
                       className="mt-1 rounded-xl shadow-sm border-solid border-gray-200 font-semibold text-[#777777]"
                     />
+                    {errors.companyName && (
+                      <p className={errorClass}>{errors.companyName.message}</p>
+                    )}
                   </div>
                   <div>
-                    <label className="block text-sm font-medium text-gray-700">
-                      Products of Interest
-                    </label>
+                    <div className="flex items-center space-x-1">
+                      <label className="block text-sm font-medium text-gray-700">
+                        Products of Interest
+                      </label>
+                      <span className="text-[#00AAEE] font-semibold font-nunito text-[14px]">
+                        (optional)
+                      </span>
+                    </div>
                     <ProductMultiSelect />
-                    {errors.interestedProducts && (
-                      <p className="text-red-500 text-sm">
-                        {errors.interestedProducts.message}
-                      </p>
-                    )}
                   </div>
                 </div>
 
@@ -174,9 +173,7 @@ export default function ContactUs() {
                     className="mt-1 rounded-xl shadow-sm border-solid border-gray-200 font-semibold text-[#777777]"
                   />
                   {errors.email && (
-                    <p className="text-red-500 text-sm">
-                      {errors.email.message}
-                    </p>
+                    <p className={errorClass}>{errors.email.message}</p>
                   )}
                 </div>
 
@@ -191,33 +188,32 @@ export default function ContactUs() {
                     className="mt-1 rounded-xl shadow-sm border-solid border-gray-200 font-semibold text-[#777777]"
                   />
                   {errors.phone && (
-                    <p className="text-red-500 text-sm">
-                      {errors.phone.message}
-                    </p>
+                    <p className={errorClass}>{errors.phone.message}</p>
                   )}
                 </div>
 
                 {/* Message */}
                 <div>
-                  <label className="block text-sm font-medium text-gray-700">
-                    How can we help?
-                  </label>
+                  <div className="flex items-center space-x-1">
+                    <label className="block text-sm font-medium text-gray-700">
+                      How can we help?
+                    </label>
+                    <span className="text-[#00AAEE] font-semibold font-nunito text-[14px]">
+                      (optional)
+                    </span>
+                  </div>
                   <Textarea
                     {...register("message")}
                     placeholder="Type your message"
                     className="mt-1 rounded-xl shadow-sm border-solid border-gray-200 font-semibold text-[#777777]"
                   />
-                  {errors.message && (
-                    <p className="text-red-500 text-sm">
-                      {errors.message.message}
-                    </p>
-                  )}
                 </div>
 
                 {/* Submit Button */}
                 <Button
                   type="submit"
-                  className="w-full bg-[#333333] text-white rounded-[8px] hover:bg-gray-600"
+                  className="w-full bg-[#333333] text-white rounded-[8px] hover:bg-gray-600 disabled:opacity-75 disabled:cursor-not-allowed"
+                  disabled={!isValid}
                 >
                   Submit
                 </Button>

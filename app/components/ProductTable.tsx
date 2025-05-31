@@ -45,23 +45,6 @@ export default function ProductTable({ product }: ProductTableProps) {
               </p>
             )}
 
-            {/* {product?.tags && product.tags.length > 0 && (
-              <div className="mt-6">
-                <Table className="w-full border border-gray-300">
-                  <TableBody>
-                    <TableRow className="border-b border-gray-300">
-                      <TableCell className="font-semibold text-[14px] text-[#777777] ">
-                        Trades :
-                      </TableCell>
-                      <TableCell className="font-bold text-[14px] text-[#333333] whitespace-pre-wrap">
-                        {product.tags.join(", ")}
-                      </TableCell>
-                    </TableRow>
-                  </TableBody>
-                </Table>
-              </div>
-            )} */}
-
             {product.why && product.why.length > 0 && (
               <div className="mt-4">
                 <p className="font-semibold text-[14px] text-[#777777] mb-1">

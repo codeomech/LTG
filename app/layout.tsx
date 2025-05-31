@@ -3,7 +3,7 @@ import { Nunito, Titillium_Web } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
-import { Toaster } from "@/components/ui/toaster";
+import { Toaster } from "@/components/ui/sonner";
 
 const nunito = Nunito({
   subsets: ["latin"],
@@ -34,7 +34,7 @@ export default function RootLayout({
       >
         <Navbar />
         <main className="flex-1 pt-10 pb-8">{children}</main>
-        <Toaster />
+        <Toaster richColors />
         <Footer />
       </body>
     </html>

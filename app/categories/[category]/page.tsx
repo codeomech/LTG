@@ -57,7 +57,7 @@ export default function CategoryPage({
   };
 
   return (
-    <div className="container mx-auto lg:px-[60px] px-4 py-8 md:mt-16 mt-8">
+    <div className="container mx-auto lg:px-[60px] md:px-[48px] px-4 py-8 md:mt-16 mt-8">
       <h2 className="font-titillium md:text-[40px] text-3xl font-bold">
         Our Products
       </h2>
@@ -77,15 +77,21 @@ export default function CategoryPage({
           <TabsList className="bg-white rounded-full border w-full max-w-[400px] lg:max-w-[565px] border-[#E8E8E8] p-1 mx-auto ">
             <TabsTrigger
               value="perishable"
-              className="w-1/2 px-5 py-1 text-[12px] lg:text-base font-semibold font-nunito data-[state=active]:bg-[#333333] data-[state=active]:text-white rounded-full transition-all duration-300"
+              className="flex-1 min-w-0 px-2 sm:px-3 lg:px-5 py-2 text-[10px] xs:text-[11px] sm:text-[12px] lg:text-base font-semibold font-nunito data-[state=active]:bg-[#333333] data-[state=active]:text-white rounded-full transition-all duration-300 whitespace-nowrap overflow-hidden text-ellipsis"
+              title="Agro Products"
             >
-              Agro Products
+              <span className="block lg:hidden">Agro Products</span>
+              <span className="hidden lg:block">Agro Products</span>
             </TabsTrigger>
             <TabsTrigger
               value="non-perishable"
-              className="w-1/2 px-5 py-1 text-[12px] lg:text-base font-semibold font-nunito data-[state=active]:bg-[#333333] data-[state=active]:text-white rounded-full transition-all duration-300"
+              className="flex-1 min-w-0 px-2 sm:px-3 lg:px-5 py-2 text-[10px] xs:text-[11px] sm:text-[12px] lg:text-base font-semibold font-nunito data-[state=active]:bg-[#333333] data-[state=active]:text-white rounded-full transition-all duration-300 whitespace-nowrap overflow-hidden text-ellipsis"
+              title="Sustainable Packaging Products"
             >
-              Sustainable Packaging Products
+              <span className="block lg:hidden">Packaging Products</span>
+              <span className="hidden lg:block">
+                Sustainable Packaging Products
+              </span>
             </TabsTrigger>
           </TabsList>
         </div>

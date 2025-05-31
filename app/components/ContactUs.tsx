@@ -8,9 +8,9 @@ import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Mail, Phone } from "lucide-react";
-import { useToast } from "@/hooks/use-toast";
 // import emailjs from "@emailjs/browser";
 // import { useRef } from "react";
+import { toast } from "sonner";
 import ProductMultiSelect from "./ProductMultiSelect";
 import { ContactFormType, contactSchema } from "../data/contactSchema";
 
@@ -35,15 +35,11 @@ export default function ContactUs() {
     formState: { errors, isValid },
     reset,
   } = methods;
-  const { toast } = useToast();
 
   const onSubmit = async (data: ContactFormType) => {
     console.log("Form Submit Succesfully", data);
     console.log("Selected products:", data.interestedProducts);
-    toast({
-      title: "Success!",
-      description: "Message sent successfully.",
-    });
+    toast.success("Form Submitted Successfully");
     reset();
     // try {
     //   const result = await emailjs.send(
@@ -57,7 +53,7 @@ export default function ContactUs() {
     //   alert("Message sent successfully");
     //   reset();
     // } catch (error) {
-    //   alert("Failed to send message");
+    //  toast.error('Message Failed')
     //   console.error(error);
     // }
   };
@@ -74,8 +70,8 @@ export default function ContactUs() {
             Our experts are ready to assist you with inquiries, logistics, and
             strategic trade partnerships.
           </p>
-          <div className="mt-6 flex lg:flex-col justify-between lg:space-y-4 ">
-            <div className="flex items-center gap-x-2 text-[#333333] cursor-pointer">
+          <div className="mt-6 flex flex-wrap justify-center gap-y-2 lg:flex-col lg:space-y-4">
+            <div className="flex items-center gap-x-2 text-[#333333] cursor-pointer whitespace-nowrap">
               <Mail size={20} />
               <a
                 href="mailto:trade@lgtglobal.com"
@@ -84,7 +80,7 @@ export default function ContactUs() {
                 trade@lgtglobal.com
               </a>
             </div>
-            <div className="flex items-center gap-x-2 text-[#333333] cursor-pointer">
+            <div className="flex items-center gap-x-2 text-[#333333] cursor-pointer whitespace-nowrap">
               <Phone size={20} />
               <a
                 href="tel:919876543210"

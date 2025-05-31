@@ -18,7 +18,7 @@ const titillium = Titillium_Web({
 });
 
 export const metadata: Metadata = {
-  title: "LTG",
+  title: "LGT",
   description: "Export Fruits and Veggies",
 };
 

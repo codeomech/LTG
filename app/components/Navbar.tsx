@@ -81,7 +81,7 @@ const Navbar = () => {
               className={`font-semibold text-xl px-3 py-1 rounded-full transition 
         ${
           activeTab === item.id
-            ? "bg-blue-100 text-blue-400"
+            ? "bg-blue-100 text-black"
             : "hover:text-blue-900"
         }`}
             >

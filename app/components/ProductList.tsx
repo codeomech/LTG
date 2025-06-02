@@ -4,6 +4,7 @@ import { useState } from "react";
 import productsData from "../data/products.json";
 import ProductCard from "./ProductCard";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { AnimatePresence, motion } from "motion/react";
 
 // Sample Product Data
 
@@ -60,19 +61,37 @@ const ProductList = () => {
           </div>
 
           <TabsContent value="perishable" className="mt-0">
-            <div className="grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 xs:gap-4 sm:gap-5 lg:gap-6 justify-items-center">
-              {categoryData?.subcategories.map((subcategory, index) => (
-                <ProductCard key={index} product={subcategory} />
-              ))}
-            </div>
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={activeTab}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.3 }}
+                className="grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 xs:gap-4 sm:gap-5 lg:gap-6 justify-items-center"
+              >
+                {categoryData?.subcategories.map((subcategory, index) => (
+                  <ProductCard key={index} product={subcategory} />
+                ))}
+              </motion.div>
+            </AnimatePresence>
           </TabsContent>
 
           <TabsContent value="non-perishable" className="mt-0">
-            <div className="grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 xs:gap-4 sm:gap-5 lg:gap-6 justify-items-center">
-              {categoryData?.subcategories.map((subcategory, index) => (
-                <ProductCard key={index} product={subcategory} />
-              ))}
-            </div>
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={activeTab}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.3 }}
+                className="grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 xs:gap-4 sm:gap-5 lg:gap-6 justify-items-center"
+              >
+                {categoryData?.subcategories.map((subcategory, index) => (
+                  <ProductCard key={index} product={subcategory} />
+                ))}
+              </motion.div>
+            </AnimatePresence>
           </TabsContent>
         </Tabs>
       </div>

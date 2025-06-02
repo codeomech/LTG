@@ -59,11 +59,12 @@ const products = [
 ];
 
 export default function ProductMultiSelect() {
-  const { control, setValue } = useFormContext();
+  const { control, setValue, watch, formState } = useFormContext();
   const [open, setOpen] = useState<boolean>(false);
   const [selectedProducts, setSelectedProducts] = useState<ProductOption[]>([]);
   const [otherProduct, setOtherProduct] = useState<string>("");
   const triggerRef = useRef<HTMLButtonElement | null>(null);
+  const previousSubmitCount = useRef<number>(0);
 
   // Check if "Other" is selected
   const isOtherSelected = selectedProducts.some(
@@ -79,6 +80,32 @@ export default function ProductMultiSelect() {
     setValue("interestedProducts", productList);
   }, [selectedProducts, otherProduct, setValue]);
 
+  // Reset detection using submitCount
+  useEffect(() => {
+    if (formState.submitCount > previousSubmitCount.current) {
+      // Form was submitted, reset local state
+      setSelectedProducts([]);
+      setOtherProduct("");
+      previousSubmitCount.current = formState.submitCount;
+    }
+  }, [formState.submitCount]);
+
+  // Backup reset detection - watch for empty interestedProducts
+  useEffect(() => {
+    const subscription = watch((value) => {
+      if (
+        value.interestedProducts &&
+        value.interestedProducts.length === 0 &&
+        selectedProducts.length > 0
+      ) {
+        setSelectedProducts([]);
+        setOtherProduct("");
+      }
+    });
+
+    return () => subscription.unsubscribe();
+  }, [watch, selectedProducts.length]);
+
   // Handle product selection/deselection
   const toggleProduct = (product: ProductOption) => {
     setSelectedProducts((current) => {
@@ -86,7 +113,7 @@ export default function ProductMultiSelect() {
 
       if (isSelected) {
         // If removing "other", also clear the other product text
-        if (product.value === "other") {
+        if (product.value === "others") {
           setOtherProduct("");
         }
         return current.filter((item) => item.value !== product.value);
@@ -102,7 +129,7 @@ export default function ProductMultiSelect() {
       current.filter((item) => item.value !== productToRemove.value)
     );
 
-    if (productToRemove.value === "other") {
+    if (productToRemove.value === "others") {
       setOtherProduct("");
     }
   };

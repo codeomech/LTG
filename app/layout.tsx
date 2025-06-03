@@ -4,6 +4,7 @@ import "./globals.css";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import { Toaster } from "@/components/ui/sonner";
+import { Analytics } from "@vercel/analytics/next";
 
 const nunito = Nunito({
   subsets: ["latin"],
@@ -33,7 +34,10 @@ export default function RootLayout({
         className={`${nunito.variable} ${titillium.variable} min-h-screen flex flex-col`}
       >
         <Navbar />
-        <main className="flex-1 pt-10 pb-8">{children}</main>
+        <main className="flex-1 pt-10 pb-8">
+          {children}
+          <Analytics />
+        </main>
         <Toaster richColors />
         <Footer />
       </body>

@@ -57,7 +57,7 @@ export default function CategoryPage({
   };
 
   return (
-    <div className="container mx-auto lg:px-[60px] md:px-[48px] px-4 py-8 md:mt-16 mt-8">
+    <div className="mx-auto lg:px-[60px] md:px-[48px] px-4 py-8 md:mt-16 mt-8">
       <h2 className="font-titillium md:text-[40px] text-3xl font-bold">
         Our Products
       </h2>

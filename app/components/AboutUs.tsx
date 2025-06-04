@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 const AboutUs = () => {
   return (
     <section className="w-full md:min-h-screen flex items-center justify-center">
-      <div className="container mx-auto flex py-10 px-6 md:px-24 flex-col-reverse lg:flex-row justify-center items-center gap-12 md:gap-[100px]">
+      <div className="mx-auto flex py-10 px-6 md:px-24 flex-col-reverse lg:flex-row justify-center items-center gap-12 md:gap-[100px]">
         {/* Left: Feature Cards */}
         <motion.div
           whileInView={{ opacity: 1, x: 0 }}

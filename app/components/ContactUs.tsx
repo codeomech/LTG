@@ -67,7 +67,7 @@ export default function ContactUs() {
 
   return (
     <div className="w-full md:min-h-screen flex items-center justify-center ">
-      <div className=" container mx-auto flex flex-col py-10 px-6 md:px-24 lg:flex-row justify-center gap-12 md:gap-24">
+      <div className="w-full mx-auto flex flex-col py-10 px-4 sm:px-6 md:px-10 lg:px-24 lg:flex-row justify-center gap-8 md:gap-16">
         {/* Left Section */}
         <motion.div
           whileInView={{ opacity: 1, x: 0 }}
